@@ -2,7 +2,7 @@
 #define PARKING_SIDE_TYPE_INFO
 #include <iparking_type_info.h>
 
-namespace bmw
+namespace parking_type
 {
 namespace jorden
 {
@@ -19,18 +19,18 @@ namespace jorden
 
 class ParkingSideTypeInfo : public IParkingTypeInfo
 {
-	public :
-	
-	ParkingSideTypeInfo();
-	void GetParkingInfo(std::string &info);
-	
-	private :
-	
-	uint16_t parkpos_;
-	
+        public :
+
+        ParkingSideTypeInfo();
+        void GetParkingInfo(const std::string &info);
+        ~ParkingSideTypeInfo();
+        private :
+
+        uint16_t parkpos_;
+
 };
 
 }//end jorden
-}//end bmw
+}//end parking_type
 
 #endif //PARKING_SIDE_TYPE_INFO

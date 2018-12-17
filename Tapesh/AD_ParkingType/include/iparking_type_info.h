@@ -3,11 +3,11 @@
 #include <cstddef>
 #include <string>
 
-namespace bmw
+namespace parking_type
 {
 namespace jorden
 {
-	
+
 /**
  * /Class IParkingTypeInfo
  * 
@@ -21,20 +21,22 @@ namespace jorden
  
 class IParkingTypeInfo
 {
-	
-	public:
-	
-	/**
-	 * /bref Inerface which provide information about type of 
-	 *       parking 
-	 * @param parameter1 Output paramter return information 
-	 *        about the parking information
-	 * */
-	virtual void GetParkingInfo(std::string &info) = 0;
-	
+
+        public:
+
+        /**
+        * /bref Inerface which provide information about type of 
+        *       parking 
+        * @param parameter1 Output paramter return information 
+        *        about the parking information
+        * */
+        virtual void GetParkingInfo(const std::string &info) = 0;
+        /* destroctor */
+        virtual ~IParkingTypeInfo() {}
 };
+        
 
 }//end jorden
-}//end bmw
+}//end parking_type
 
 #endif //IPARKING_TYPE_INFO

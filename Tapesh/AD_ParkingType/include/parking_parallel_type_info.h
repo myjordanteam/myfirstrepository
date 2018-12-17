@@ -2,7 +2,7 @@
 #define PARKING_PARALLEL_TYPE_INFO
 
 #include <iparking_type_info.h>
-namespace bmw
+namespace parking_type
 {
 namespace jorden
 {
@@ -19,17 +19,17 @@ namespace jorden
  * */
 class ParkingParallelTypeInfo : public IParkingTypeInfo
 {
-	public :
-	
-	ParkingParallelTypeInfo();
-	void GetParkingInfo(std::string &info);
-	
-	private :
-	
-	uint16_t parkpos_;
-	
+        public :
+        
+        ParkingParallelTypeInfo();
+        void GetParkingInfo(const std::string &info);
+        ~ParkingParallelTypeInfo();
+        private :
+        
+        uint16_t parkpos_;
+
 };
 
 }//end jorden
-}//end bmw
+}//end parking_type
 #endif //PARKING_PARALLEL_TYPE_INFO
